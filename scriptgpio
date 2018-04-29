@@ -18,21 +18,23 @@ print(action)
 print(pumpId)
 print(during)
 
-pumps = {}
-pumps["pump1"] = 17
-pumps["pump2"] = 18
-pumps["pump3"] = 27
-pumps["pump4"] = 22
-pumps["pump5"] = 23
-pumps["pump6"] = 24
-pumps["pump7"] = 25
-pumps["pump8"] = 4
+#pumps = {}
+#pumps["pump1"] = 17
+#pumps["pump2"] = 18
+#pumps["pump3"] = 27
+#pumps["pump4"] = 22
+#pumps["pump5"] = 23
+#pumps["pump6"] = 24
+#pumps["pump7"] = 25
+#pumps["pump8"] = 4
 
 #action = "start" 
 #pumpId = "pump1"
 #during = 1
 
-gpioId = pumps.get(pumpId)
+#gpioId = pumps.get(pumpId)
+
+gpioId = pumpId
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
