@@ -36,7 +36,7 @@ class GpioController extends MyController {
             
             var_dump(dirname(__FILE__));
             
-            $cmd = "sudo -t  php ../scriptgpio.php $id $during";
+            $cmd = "php ../scriptgpio.php $id $during";
             
             var_dump($cmd);
             
