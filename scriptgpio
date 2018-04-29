@@ -10,8 +10,8 @@ import RPi.GPIO as GPIO
 
 rn = "\r\n";
 
-pumpId = sys.argv[1]
-during = sys.argv[2]
+pumpId = int(sys.argv[1])
+during = int(sys.argv[2])
 
 print(pumpId)
 print(during)
@@ -26,7 +26,7 @@ print(during)
 #pumps["pump7"] = 25
 #pumps["pump8"] = 4
 
-gpioId = int(pumpId)
+gpioId = pumpId
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
