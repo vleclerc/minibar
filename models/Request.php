@@ -9,10 +9,13 @@ class Request {
     
     public function __construct(){
         
+        $uri = $_SERVER['REQUEST_URI'];
+        if(substr($uri, 0, 1) == '/'){
+            str_replace('/','',$uri);
+        }
+        var_dump($uri);
         
-        var_dump(substr($_SERVER['REQUEST_URI'], 0, 1));
-        
-        switch(substr($_SERVER['REQUEST_URI'], 0, 1)){
+        switch($uri){
             case 'gpio':
                 $this->action = 'GpioController';
                 break;
