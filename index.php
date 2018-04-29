@@ -1,6 +1,9 @@
 <?php
 
 spl_autoload_register(function ($class_name) {
+    
+    var_dump($class_name);
+    
     if (file_exists($className . '.php')) { 
         require_once $class_name . '.php';
     }
@@ -13,20 +16,6 @@ spl_autoload_register(function ($class_name) {
     
 });
     
-
-class Request {
-    public $parameter;
-    public $method;
-    
-    public function __construct(){
-        $this->method = $_SERVER['REQUEST_METHOD'];
-        
-        $data = json_decode(file_get_contents('php://input'), true);
-        
-        $this->parameter = $data;
-    }
-}
-
 $request = new Request();
 
 $gpioController = new GpioController();
