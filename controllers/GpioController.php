@@ -17,14 +17,12 @@ class GpioController extends MyController
         return $this->response->toJson();
     }
 
-    public function postAction($request) {
+    public function postAction($args) {
 	
 	$data = new StdCLass();
 	
 	$this->response = new ResponseModel();
 	
-	$args = $request->parameters;        
-
 	//var_dump($args); die;		
 
 	if(isset($args['pumpId']) && isset($args['during']) ){
