@@ -7,6 +7,6 @@ require_once 'autoloader.php';
 
 $request = new Request();
 
-$controller = new $request->action;
+$controller = new $request->controller;
 $controller->{$request->action}($request->parameter);
 

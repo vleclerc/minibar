@@ -1,9 +1,9 @@
 <?php
 class Request {
     
-    public $action;
+    public $controller;
     
-    public $method;
+    public $action;
     
     public $parameter;
     
@@ -13,22 +13,21 @@ class Request {
         if(substr($uri, 0, 1) == '/'){
             $uri = str_replace('/','',$uri);
         }
-        var_dump($uri);
         
         switch($uri){
             case 'gpio':
-                $this->action = 'GpioController';
+                $this->controller = 'GpioController';
                 break;
             default:
-                $this->action = 'IndexController';
+                $this->controller = 'IndexController';
         }
         
         switch($_SERVER['REQUEST_METHOD']){
             case 'POST':
-                $this->method = 'postAction';
+                $this->action = 'postAction';
                 break;
             case 'GET':
-                $this->method = 'getAction';
+                $this->action = 'getAction';
                 break;
             default:
         }
