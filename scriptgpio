@@ -7,6 +7,8 @@ import cgi
 import os, sys, time, json, getopt
 import RPi.GPIO as GPIO
 
+print(sys.argv)
+
 print("Content-Type: application/json\n\n")
 rn = "\r\n";
 data = json.loads(sys.stdin.read())
