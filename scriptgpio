@@ -14,6 +14,10 @@ action = data.get("action")
 pumpId = data.get("pumpId")
 during = int(data.get("during"))
 
+print(action)
+print(pumpId)
+print(during)
+
 pumps = {}
 pumps["pump1"] = 17
 pumps["pump2"] = 18
@@ -26,7 +30,7 @@ pumps["pump8"] = 4
 
 #action = "start" 
 #pumpId = "pump1"
-#during = 10
+#during = 1
 
 gpioId = pumps.get(pumpId)
 
