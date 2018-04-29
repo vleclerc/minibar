@@ -23,8 +23,6 @@ class GpioController extends MyController
 	
 	$this->response = new ResponseModel();
 	
-	//var_dump($args); die;		
-
 	if(isset($args['pumpId']) && isset($args['during']) ){
 
 		$pumpId = $args['pumpId'];
