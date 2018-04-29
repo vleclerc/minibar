@@ -6,6 +6,8 @@ $request = new Request();
 
 $gpioController = new GpioController();
 
+var_dump($request->method);
+
 switch($request->method){
     case 'POST':
         $gpioController->postAction($request);
