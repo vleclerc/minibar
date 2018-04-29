@@ -3,6 +3,8 @@ spl_autoload_register(function ($class_name) {
     
     var_dump($class_name);
     
+    var_dump(dirname(__FILE__));
+    
     if (file_exists($className . '.php')) {
         var_dump('index');
         require_once $class_name . '.php';
