@@ -1,16 +1,33 @@
 <?php
 class Request {
-    public $parameter;
+    
+    public $action;
+    
     public $method;
     
+    public $parameter;
+    
     public function __construct(){
-        $this->method = $_SERVER['REQUEST_METHOD'];
         
+        switch($_SERVER['REQUEST_URI']){
+            case 'gpio':
+                $this->action = 'GpioController';
+                break;
+            default:
+                $this->action = 'IndexController';
+        }
         
-        var_dump($this->method);
+        switch($_SERVER['REQUEST_METHOD']){
+            case 'POST':
+                $this->method = 'postAction';
+                break;
+            case 'GET':
+                $this->method = 'getAction';
+                break;
+            default:
+        }
         
         $data = json_decode(file_get_contents('php://input'), true);
-        
         var_dump($data);
         
         $this->parameter = $data;
