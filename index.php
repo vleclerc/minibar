@@ -1,2 +1,3 @@
 <?php
-echo 'test';
+var_dump($_SERVER);
+die;
