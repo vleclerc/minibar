@@ -9,9 +9,10 @@ class Request {
     
     public function __construct(){
         
-        var_dump($_SERVER['REQUEST_URI']);
         
-        switch($_SERVER['REQUEST_URI']){
+        var_dump(substr($_SERVER['REQUEST_URI'], 0, 1));
+        
+        switch(substr($_SERVER['REQUEST_URI'], 0, 1)){
             case 'gpio':
                 $this->action = 'GpioController';
                 break;
