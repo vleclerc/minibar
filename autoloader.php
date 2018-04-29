@@ -1,7 +1,8 @@
 <?php
 spl_autoload_register(function ($class_name) {
     
-    var_dump($class_name);
+    var_dump(dirname(__FILE__) . '/models/' . $className . '.php');
+    var_dump(file_exists(dirname(__FILE__) . '/models/' . $className . '.php'));
     
     
     if (file_exists($className . '.php')) {
