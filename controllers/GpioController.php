@@ -34,6 +34,8 @@ class GpioController extends MyController {
         
             $id = $mapping[$pumpId];
             
+            var_dump(dirname(__FILE__));
+            
             $cmd = "sudo -t php ./scriptgpio $id $during";
             
             var_dump($cmd);
