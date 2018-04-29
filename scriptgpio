@@ -10,11 +10,9 @@ import RPi.GPIO as GPIO
 
 rn = "\r\n";
 
-action = data.get("action")
 pumpId = sys.argv[1]
 during = sys.argv[2]
 
-print(action)
 print(pumpId)
 print(during)
 
@@ -28,12 +26,6 @@ print(during)
 #pumps["pump7"] = 25
 #pumps["pump8"] = 4
 
-#action = "start" 
-#pumpId = "pump1"
-#during = 1
-
-#gpioId = pumps.get(pumpId)
-
 gpioId = pumpId
 
 GPIO.setwarnings(False)
@@ -44,7 +36,7 @@ GPIO.output(gpioId, GPIO.HIGH)
 
 #os.system("gpio read "+str(gpioId))
 
-print 'action: {} \r\n gpioId: {} \r\n during: {}'.format(action, gpioId, during)
+print 'gpioId: {} \r\n during: {}'.format(gpioId, during)
 
 time.sleep(during)
 
