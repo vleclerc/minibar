@@ -11,7 +11,7 @@ class Request {
         
         $uri = $_SERVER['REQUEST_URI'];
         if(substr($uri, 0, 1) == '/'){
-            str_replace('/','',$uri);
+            $uri = str_replace('/','',$uri);
         }
         var_dump($uri);
         
