@@ -1,4 +1,4 @@
-# Raspibar
+# RaspiBar
 
 ## Description
 
