@@ -13,3 +13,6 @@ https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&titl
 
 ### Network Routing Diagram
 https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=NetworkArchitectureDiagram.xml#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvleclerc%2Fminibar%2Fmaster%2Fdoc%2FNetworkRoutingDiagram.xml
+
+### Stack
+https://stackshare.io/vleclerc/raspibar
