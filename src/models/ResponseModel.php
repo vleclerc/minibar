@@ -3,11 +3,17 @@
 class ResponseModel extends StdClass {
 
 	public $data;
+	public $error;
 	public $status;
 
 	public function setData($data){
 		$this->data = $data;
 		return $this;
+	}
+	
+	public function setError($error){
+	    $this->error = $error;
+	    return $this;
 	}
 
 	public function setStatus($status){
