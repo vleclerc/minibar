@@ -3,7 +3,7 @@
 class GpioController extends MyController {
     
     public function getAction($request) {
-        $data = new StdClass();
+        $data = new stdClass();
         $result = exec('cd .. & sudo -t /usr/bin/php ./scriptgpio 17 1');
         $data->message = $result;
         $data->datetime = date('d/m/Y H:i:s');
@@ -13,10 +13,7 @@ class GpioController extends MyController {
     }
 
     public function postAction($args) {
-	
-        var_dump(__METHOD__);
-        
-	   $data = new StdCLass();
+	   $data = new stdClass();
 	   $this->response = new ResponseModel();
 	   if(isset($args['pumpId']) && isset($args['during']) ){
             $pumpId = $args['pumpId'];
@@ -34,16 +31,9 @@ class GpioController extends MyController {
         
             $id = $mapping[$pumpId];
             
-            var_dump(dirname(__FILE__));
-            
             $cmd = "php ".dirname(__FILE__)."/../scriptgpio.php $id $during";
             
-            var_dump($cmd);
-            
             $output = passthru($cmd);
-            
-            
-            var_dump($output);
             
             $data->message = $output;
             $this->response->setData($data)->setStatus('success');

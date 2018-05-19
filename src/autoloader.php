@@ -1,6 +1,5 @@
 <?php
 spl_autoload_register(function ($className) {
-    
     if (file_exists($className . '.php')) {
         require_once $className . '.php';
     }
@@ -10,7 +9,7 @@ spl_autoload_register(function ($className) {
     else if (file_exists(dirname(__FILE__) . '/controllers/' . $className . '.php')) {
         require_once dirname(__FILE__) . '/controllers/' . $className . '.php';
     } else {
-        var_dump($className.' not found');
+        var_dump('Fatal Error : '.$className.' not found'); die;
     }
     
 });

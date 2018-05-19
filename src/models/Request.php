@@ -1,11 +1,15 @@
 <?php
 class Request {
     
-    public $controller;
+    public $controller = '';
     
-    public $action;
+    public $action = '';
     
-    public $parameter;
+    public $parameter = null;
+    
+    const DEFAULT_CONTROLLER = 'index';
+    const CONTROLLER_SUFFIX = 'Controller';
+    const ACTION_SUFFIX = 'Action';
     
     public function __construct(){
         
@@ -16,20 +20,21 @@ class Request {
         
         switch($uri){
             case 'gpio':
-                $this->controller = 'GpioController';
+                $this->controller = ucfirst($uri) . self::CONTROLLER_SUFFIX;
                 break;
             default:
-                $this->controller = 'IndexController';
+                $this->controller =  ucfirst(self::DEFAULT_CONTROLLER) . self::CONTROLLER_SUFFIX;
         }
         
         switch($_SERVER['REQUEST_METHOD']){
             case 'POST':
-                $this->action = 'postAction';
-                break;
             case 'GET':
-                $this->action = 'getAction';
+            case 'PUT':
+            case 'DELETE':
+                $this->action = strtolower($_SERVER['REQUEST_METHOD']) . self::ACTION_SUFFIX;
                 break;
             default:
+                var_dump('FATAL ERROR : METHOD UNAUTHORIZED'); die;
         }
         
         $data = json_decode(file_get_contents('php://input'), true);

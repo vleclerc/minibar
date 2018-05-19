@@ -1,0 +1,17 @@
+version: '3'
+services:
+  php:
+    image: php:7-fpm
+    volumes:
+      - "./public:/var/www/html"
+      - "./src:/var/www/src"
+  nginx:
+    image: nginx
+    ports:
+      - 8084:80
+    volumes:
+      - "./nginx:/etc/nginx/conf.d"
+      - "./public:/var/www/html"
+      - "./src:/var/www/src"
+    links:
+      - php:php
