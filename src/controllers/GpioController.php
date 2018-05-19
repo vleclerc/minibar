@@ -15,7 +15,7 @@ class GpioController extends MyController {
     
     public function getAction($request) {
         $data = new stdClass();
-        $cmd = "php ".dirname(__FILE__)."/../scriptgpio.php pump1 1";
+        $cmd = "php ".dirname(__FILE__)."/../scriptgpio.php 17 1";
         $output = passthru($cmd);
         $data->message = $output;
         $data->datetime = date('d/m/Y H:i:s');
