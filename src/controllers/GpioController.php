@@ -3,14 +3,14 @@
 class GpioController extends MyController {
     
     static public $mapping = array(
-        'pump1' => '17',
-        'pump2' => '18',
-        'pump3' => '27',
-        'pump4' => '22',
-        'pump5' => '23',
-        'pump6' => '24',
-        'pump7' => '25',
-        'pump8' => '26'
+        'pump1' => '17', // GPIO 0
+        'pump2' => '18', // GPIO 1
+        'pump3' => '27', // GPIO 2
+        'pump4' => '22', // GPIO 3
+        'pump5' => '23', // GPIO 4 //replace pump?
+        'pump6' => '24', // GPIO 5
+        'pump7' => '25', // GPIO 6
+        'pump8' => '26' // GPIO 25...
     );
     
     public function getAction($request) {
