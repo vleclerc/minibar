@@ -2,12 +2,7 @@ $(document).ready(function(){
 	
 	//firebase config
 	var config = {
-		    apiKey: "AIzaSyBLkTEUaS9cw9rEwhd4AWMT0PONd7Gbv1k",
-		    authDomain: "raspibar-35706.firebaseapp.com",
-		    databaseURL: "https://raspibar-35706.firebaseio.com",
-		    projectId: "raspibar-35706",
-		    storageBucket: "raspibar-35706.appspot.com",
-		    messagingSenderId: "701803412688"
+
 	};
 	
 	var database = null;
