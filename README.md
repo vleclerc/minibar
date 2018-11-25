@@ -1,4 +1,6 @@
-# RaspiBar
+# RaspiBar 
+
+[![Build Status](https://travis-ci.org/vleclerc/raspibar.svg?branch=master)](https://travis-ci.org/vleclerc/raspibar)
 
 ## Description
 
