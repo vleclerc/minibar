@@ -1,7 +1,5 @@
 # RaspiBar 
 
-[![Build Status](https://travis-ci.org/vleclerc/raspibar.svg?branch=master)](https://travis-ci.org/vleclerc/raspibar)
-
 ## Description
 
 The "RaspiBar" is a mini bar "connected". It is composed of a raspberry pi 3b + which allows to control 8 peristaltic pumps 12v via its GPIO inputs / outputs. Pumps can mix multiple liquids to make simple cocktails from your phone, tablet or computer. You will find here all the information to reproduce the RaspiBar. 
